@@ -23,7 +23,7 @@ export default function About() {
                         Hi everyone! My name is Neli, and I'm a 23-year-old woman from Greece. I've been drawing since I was
                         a child. I am a self-taught artist, and I like to use colored pencils, markers, and graphite for my
                         work. I have drawn a lot of portraits, anime drawings, and game character drawings. I decided to
-                        expand my work and share it with the world to express my passion. I'm looking forward to receiving
+                        expand my work and share it with the world to express my passion. I'm looking forward to receive
                         your order!
                     </p>
                 </div>
