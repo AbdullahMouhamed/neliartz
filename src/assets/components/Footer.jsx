@@ -17,7 +17,7 @@ export default function Footer() {
                     viewport={{ once: false, amount: 0.3 }} // Repeat animation for the text
                     transition={{ duration: 1, delay: 0.3 }}
                 >
-                    &copy; {new Date().getFullYear()} Masquerades Room. All rights reserved.
+                    &copy; {new Date().getFullYear()} Neli's Arts. All rights reserved.
                 </motion.p>
             </div>
         </motion.footer>

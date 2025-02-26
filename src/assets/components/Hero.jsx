@@ -11,7 +11,7 @@ export default function Hero() {
                         viewport={{ once: false, amount: 0.5 }}
                         className="text-white text-[32px] sm:text-[50px] text-center z-50"
                     >
-                        Welcome To <span className="text-red-600">Masquerade's Room</span>
+                        Welcome To <span className="text-red-600">Neli's Arts</span>
                     </motion.h1>
                     <motion.div
                         initial={{ opacity: 0, y: -50 }}

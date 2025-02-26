@@ -8,7 +8,7 @@ export default function Navbar() {
                             href="/"
                             className="my-font text-[20px] sm:text-[30px] mx-auto flex justify-center items-center gap-2 text-red-500 font-bold"
                         >
-                            Masquerade's Room
+                            Neli's Arts
                             <i className="fa-solid fa-star fa-bounce text-[15px]"></i>
                         </a>
                     </h1>
