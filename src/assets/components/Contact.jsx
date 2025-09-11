@@ -74,7 +74,7 @@ export default function Contact() {
 
           {/* TikTok */}
           <motion.a
-            href="https://www.tiktok.com/@nelizoldyck"
+            href="https://www.tiktok.com/@neli_artz?_t=ZN-8zdz3tv4nIc&_r=1"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center w-48 py-3 px-6 rounded-xl 

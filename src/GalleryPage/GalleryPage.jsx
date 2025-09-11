@@ -5,7 +5,7 @@ import image4 from "../assets/images/4.jpg";
 import image5 from "../assets/images/5.jpg";
 import image6 from "../assets/images/6.jpg";
 import image7 from "../assets/images/7.jpg";
-import image8 from "../assets/images/8.png";
+import image8 from "../assets/images/8.jpg";
 import image9 from "../assets/images/9.png";
 
 import { motion } from "framer-motion";
@@ -13,15 +13,15 @@ import Gallery from "../assets/components/Gallery";
 
 export default function GalleryPage() {
   const pics = [
-    { id: 1, url: image1, price: 29.99 },
-    { id: 2, url: image2, price: 39.99 },
-    { id: 3, url: image3, price: 19.99 },
-    { id: 4, url: image4, price: 49.99 },
-    { id: 5, url: image5, price: 24.99 },
-    { id: 6, url: image6, price: 34.99 },
-    { id: 7, url: image7, price: 59.99 },
-    { id: 8, url: image8, price: 44.99 },
-    { id: 9, url: image9, price: 54.99 },
+    { id: 1, url: image1 },
+    { id: 2, url: image2 },
+    { id: 3, url: image3 },
+    { id: 4, url: image4 },
+    { id: 5, url: image5 },
+    { id: 6, url: image6 },
+    { id: 7, url: image7 },
+    { id: 8, url: image8 },
+    { id: 9, url: image9 },
   ];
 
   return (
@@ -67,7 +67,7 @@ export default function GalleryPage() {
                 show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
               }}
             >
-              <Gallery url={pic.url} id={pic.id} price={pic.price} />
+              <Gallery url={pic.url} id={pic.id}  />
             </motion.div>
           ))}
         </motion.div>

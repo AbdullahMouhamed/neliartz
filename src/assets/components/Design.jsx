@@ -22,61 +22,40 @@ const Design = () => {
             fpsLimit: 60,
             interactivity: {
               events: {
-                onClick: { enable: true, mode: "push" },
-                onHover: { enable: true, mode: "bubble" },
+                onClick: false, // no push mode for smoother performance
+                onHover: false,
                 resize: true,
-              },
-              modes: {
-                push: { quantity: 2 },
-                bubble: {
-                  distance: 180,
-                  size: 7,
-                  duration: 2,
-                  opacity: 0.7,
-                },
               },
             },
             particles: {
               color: {
-                value: ["#fb7185", "#facc15", "#c084fc", "#60a5fa"], // rose, gold, purple, soft blue
+                value: ["#60a5fa", "#c084fc", "#facc15"], // fewer colors = smoother
               },
               move: {
-                direction: "none",
                 enable: true,
-                speed: 0.8, // slower, calm drift
-                random: true,
+                speed: 0.5, // ultra-smooth drifting
+                direction: "none",
+                random: false,
                 straight: false,
                 outModes: { default: "out" },
               },
               number: {
-                density: { enable: true, area: 1200 },
-                value: 40, // fewer, more elegant
+                density: { enable: true, area: 1800 }, // larger area = spread out
+                value: 20, // fewer particles
               },
               opacity: {
-                value: 0.6,
-                random: true,
-                animation: {
-                  enable: true,
-                  speed: 0.8,
-                  minimumValue: 0.2,
-                },
+                value: 0.4, // static, no recalculation
               },
               shape: {
-                type: ["circle", "star"], // keep it artistic & light
+                type: "star", // cheapest shape
               },
               size: {
-                value: { min: 2, max: 5 },
-                random: true,
-                animation: {
-                  enable: true,
-                  speed: 1.5,
-                  minimumValue: 1,
-                },
+                value: 3, // consistent size (no animation)
               },
             },
             detectRetina: true,
             background: {
-              color: "#111827", // slate background (same as navbar)
+              color: "#111827", // slate background
             },
           }}
         />

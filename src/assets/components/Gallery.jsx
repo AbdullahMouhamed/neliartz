@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export default function Gallery({ url, id, price }) {
+export default function Gallery({ url, id}) {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => setModalOpen(true);
@@ -33,7 +33,7 @@ export default function Gallery({ url, id, price }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 flex justify-center items-center bg-black/70 backdrop-blur-sm z-[9999] w-full h-screen"
+            className="fixed inset-0 flex justify-center items-center bg-black/70 backdrop-blur-sm z-[9999]"
             onClick={closeModal}
           >
             <motion.div
@@ -66,12 +66,12 @@ export default function Gallery({ url, id, price }) {
         )}
       </AnimatePresence>
 
-      {/* Stylish Gallery Card */}
+      {/* Gallery Card */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 * id, duration: 0.6, ease: "easeOut" }}
-        whileHover={{ y: -8, scale: 1.03 }}
+        whileHover={{ y: -8 }} // only lift, no scale
         whileTap={{ scale: 0.97 }}
         onClick={openModal}
         className="relative group cursor-pointer w-full max-w-[300px] rounded-2xl overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 shadow-lg hover:shadow-rose-500/40 transition"
@@ -81,21 +81,12 @@ export default function Gallery({ url, id, price }) {
           <img
             src={url}
             alt={`Gallery Thumbnail ${id}`}
-            className="w-full h-full object-cover rounded-t-2xl group-hover:scale-110 transition duration-500 ease-out"
+            className="w-full h-full object-cover rounded-t-2xl transform group-hover:scale-110 transition duration-500 ease-out"
           />
-
-          {/* Floating Price Tag */}
-          <span className="absolute top-3 right-3 bg-gradient-to-r from-rose-500 to-pink-600 text-white text-sm font-bold px-3 py-1 rounded-full shadow-md">
-            ${price}
-          </span>
-        </div>
-
-        {/* Card Body */}
-        <div className="p-4 flex flex-col items-start gap-2">
-          <h3 className="font-semibold text-lg text-white">Artwork #{id}</h3>
-          <p className="text-sm text-gray-300">
-            Tap to view this piece in full detail.
-          </p>
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+          {/* Price Tag */}
+       
         </div>
 
         {/* Gradient border hover effect */}

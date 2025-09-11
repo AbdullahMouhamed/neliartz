@@ -8,7 +8,7 @@ export default function Navbar() {
             className="my-font text-[clamp(20px,2.5vw,30px)] mx-auto flex justify-center items-center gap-2 text-rose-400 font-bold tracking-wide transition-transform duration-300 hover:scale-105 hover:text-rose-300"
           >
             Neli&apos;s Arts
-            <i className="fa-solid fa-star fa-bounce text-[15px] text-yellow-400 drop-shadow-md"></i>
+           🪭
           </a>
         </h1>
       </div>
