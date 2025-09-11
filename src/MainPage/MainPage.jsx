@@ -3,7 +3,6 @@ import Design from './../assets/components/Design';
 import Navbar from './../assets/components/Navbar';
 import About from './../assets/components/About';
 import Hero from './../assets/components/Hero';
-import Gallery from './../assets/components/Gallery';
 import GalleryPage from '../GalleryPage/GalleryPage';
 import Content from '../assets/components/Content';
 import Contact from '../assets/components/Contact';
@@ -13,12 +12,15 @@ export default function MainPage() {
         <>
             <Design />
             <Navbar />
-            <Hero />
-            <About />
-            <GalleryPage />
-            <Content />
-            <Contact />
-            <Footer />
+            <div className="pt-16"> {/* pushes sections down */}
+                <Hero />
+                <About />
+                <GalleryPage />
+                <Content />
+                <Contact />
+                <Footer />
+            </div>
         </>
-    )
+    );
 }
+

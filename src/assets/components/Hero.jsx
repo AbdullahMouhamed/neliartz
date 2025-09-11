@@ -1,34 +1,39 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 export default function Hero() {
-    return (
-        <>
-            <section className="hero ">
-                <div className="container mx-auto px-4 h-[90vh] flex flex-col gap-8 sm:gap-16 justify-center items-center">
-                    <motion.h1
-                        initial={{ opacity: 0, y: -50 }}
-                        whileInView={{ opacity: 1, y: 0, transition: { delay: 0.3, duration: 0.8 } }}
-                        viewport={{ once: false, amount: 0.5 }}
-                        className="text-white text-[32px] sm:text-[50px] text-center z-50"
-                    >
-                        Welcome To <span className="text-red-600">Neli's Arts</span>
-                    </motion.h1>
-                    <motion.div
-                        initial={{ opacity: 0, y: -50 }}
-                        whileInView={{ opacity: 1, y: 0, transition: { delay: 0.3, duration: 0.8 } }}
-                        viewport={{ once: false, amount: 0.5 }}
-                        className="flex flex-col sm:flex-row justify-center items-center gap-5 text-[20px] sm:text-[30px] text-center sm:text-left"
-                    >
-                        <p>I Can Draw</p>
-                        <div className="flex justify-center items-center text-red-600 overflow-hidden ">
-                            <span className="block anime overflow-hidden whitespace-nowrap">Anime Characters</span>
-                            <span className="block games overflow-hidden whitespace-nowrap">Game Characters</span>
-                            <span className="block people overflow-hidden whitespace-nowrap">People</span>
-                        </div>
-                        <span className="hidden sm:block text-white h-9 bg-white w-[1px]"></span>
-                    </motion.div>
-                </div>
-            </section>
-        </>
-    );
+  return (
+    <section className="hero relative h-[90vh] flex justify-center items-center">
+      <div className="container mx-auto px-4 flex flex-col gap-10 sm:gap-16 justify-center items-center">
+        {/* Heading */}
+        <motion.h1
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="text-white text-center font-bold text-[clamp(28px,5vw,56px)] leading-snug"
+        >
+          Welcome to{" "}
+          <span className="bg-gradient-to-r from-rose-400 via-yellow-400 to-purple-400 bg-clip-text text-transparent">
+            Neli&apos;s Arts
+          </span>
+        </motion.h1>
+
+        {/* Rotating Text */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="text-[clamp(18px,3vw,28px)] flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-5 text-gray-200"
+        >
+          <p className="whitespace-nowrap">I Can Draw</p>
+          <div className="relative h-[32px] sm:h-[36px] overflow-hidden">
+            <span className="block animate-slide text-rose-400">Anime Characters</span>
+            <span className="block animate-slide text-rose-400">Game Characters</span>
+            <span className="block animate-slide text-rose-400">People</span>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
 }

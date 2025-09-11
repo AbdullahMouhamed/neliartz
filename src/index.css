@@ -17,71 +17,25 @@ body {
   font-family: "Dancing Script Variable", cursive;
 }
 
-.anime {
-  animation: anime 10s infinite;
+@keyframes slide {
+  0%, 20%   { transform: translateY(0%); }
+  33%, 53%  { transform: translateY(-100%); }
+  66%, 86%  { transform: translateY(-200%); }
+  100%      { transform: translateY(0%); }
 }
 
-.games {
-  animation: games 10s infinite;
+.animate-slide {
+  animation: slide 6s infinite;
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-.people {
-  animation: people 10s infinite; 
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
 }
 
-@keyframes anime {
-  0%,
-  36%,
-  48%,
-  60%,
-  72%,
-  84%,
-  90%,
-  100% {
-    width: 0rem;
-  }
-
-  12%,
-  24% {
-    width: 18.6rem;
-  }
-}
-
-@keyframes games {
-  0%,
-  12%,
-  24%,
-  36%,
-  72%,
-  84%,
-  90%,
-  100% {
-    width: 0rem;
-  }
-
-  48%,
-  60% {
-    width: 18rem;
-  }
-}
-
-@keyframes people {
-  0%,
-  12%,
-  24%,
-  36%,
-  48%,
-  60%,
-  72%,
-  100% {
-    width: 0rem;
-  }
-
-  84%,
-  90% {
-    width: 6.875rem;
-  }
-}
 
 .layer {
   background-color: rgb(132, 1, 1);
