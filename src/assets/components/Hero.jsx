@@ -1,6 +1,19 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
+
+const words = ["Anime Characters", "Game Characters", "People"];
 
 export default function Hero() {
+  const [index, setIndex] = useState(0);
+
+  // cycle every 2.5s
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % words.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="hero relative h-[90vh] flex justify-center items-center">
       <div className="container mx-auto px-4 flex flex-col gap-10 sm:gap-16 justify-center items-center">
@@ -27,10 +40,19 @@ export default function Hero() {
           className="text-[clamp(18px,3vw,28px)] flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-5 text-gray-200"
         >
           <p className="whitespace-nowrap">I Can Draw</p>
-          <div className="relative h-[32px] sm:h-[36px] overflow-hidden">
-            <span className="block animate-slide text-rose-400">Anime Characters</span>
-            <span className="block animate-slide text-rose-400">Game Characters</span>
-            <span className="block animate-slide text-rose-400">People</span>
+          <div className="relative h-[32px] sm:h-[36px] overflow-hidden w-[300px]">
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+                className="absolute left-0 w-full text-rose-400 whitespace-nowrap text-center"
+              >
+                {words[index]}
+              </motion.span>
+            </AnimatePresence>
           </div>
         </motion.div>
       </div>

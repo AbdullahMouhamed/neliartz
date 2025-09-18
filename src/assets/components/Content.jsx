@@ -27,7 +27,7 @@ export default function Content() {
           </h1>
           <div className="mb-6 p-5 rounded-2xl bg-gray-900/70 border border-yellow-500/40 shadow-md">
             <h2 className="text-2xl font-bold mb-4 text-yellow-400 flex items-center justify-center gap-2">
-          
+
               Discounts
             </h2>
             <ul className="space-y-3 text-gray-200">
@@ -147,9 +147,6 @@ export default function Content() {
           </li>
           <li className="flex items-center">
             <i className="fa-solid fa-ban text-red-500 mr-3"></i> Abuse
-          </li>
-          <li className="flex items-center">
-            <i className="fa-solid fa-ban text-red-500 mr-3"></i> Furry
           </li>
           <li className="flex items-center">
             <i className="fa-solid fa-ban text-red-500 mr-3"></i> Illegal items (e.g., drugs, guns, etc.)
